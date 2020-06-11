@@ -1,7 +1,11 @@
 import Cocoa
 
 public protocol NetworkServiceProtocol {
-    func login(username: String)
+    func login(username: String) -> String
+}
+
+public protocol AlertProtocol {
+    func show(alert: NSAlert)
 }
 
 public class LoginController: NSViewController {
@@ -9,8 +13,12 @@ public class LoginController: NSViewController {
     @IBOutlet weak var usernameField: NSTextField!
     @IBOutlet weak var passwordField: NSSecureTextField!
     public var networkService: NetworkServiceProtocol!
+    public var alertService: AlertProtocol!
     @IBAction public func connectAction(_ sender: NSButton) {
-        sender.window?.close()
-        networkService.login(username: "sparta@example.com")
+        if networkService.login(username: "sparta@example.com") == "success" {
+            sender.window?.close()
+        } else {
+            alertService.show(alert: NSAlert())
+        }
     }
 }
