@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		302D1458B2EB23D6A2F0ED09 /* Pods_AppSpecs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A32BB0827C211B805B4B16F /* Pods_AppSpecs.framework */; };
+		4A10B5272492ACB200F977CC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A10B5262492ACB200F977CC /* LoginController.swift */; };
 		4A1DCC58249031320014E9CF /* LaunchAtLoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1DCC57249031320014E9CF /* LaunchAtLoginTest.swift */; };
 		4A3F3C76248C92720058C5D4 /* Testable.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A3F3C74248C92720058C5D4 /* Testable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A3F3C79248C92720058C5D4 /* Testable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A3F3C72248C92720058C5D4 /* Testable.framework */; };
@@ -76,6 +77,7 @@
 		1752C341CDE3B953C9942626 /* Pods-AppSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppSpecs.release.xcconfig"; path = "Target Support Files/Pods-AppSpecs/Pods-AppSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		18383CF04CD5A0B420B6B253 /* Pods-AppSpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppSpecs.debug.xcconfig"; path = "Target Support Files/Pods-AppSpecs/Pods-AppSpecs.debug.xcconfig"; sourceTree = "<group>"; };
 		4275614E6C55701F69F0E518 /* Pods_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A10B5262492ACB200F977CC /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		4A1DC8D06D85415B5E5370B8 /* Pods-UnitSpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnitSpecs.release.xcconfig"; path = "Target Support Files/Pods-UnitSpecs/Pods-UnitSpecs.release.xcconfig"; sourceTree = "<group>"; };
 		4A1DCC57249031320014E9CF /* LaunchAtLoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginTest.swift; sourceTree = "<group>"; };
 		4A3F3C72248C92720058C5D4 /* Testable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Testable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,6 +266,7 @@
 			children = (
 				4AA1888C2486FA90009CFACE /* AppDelegate.swift */,
 				4A3F3C9C24907B8F0058C5D4 /* LoginItemManager.swift */,
+				4A10B5262492ACB200F977CC /* LoginController.swift */,
 				4AA188902486FA90009CFACE /* Assets.xcassets */,
 				4AA188922486FA90009CFACE /* Main.storyboard */,
 				4AA188952486FA90009CFACE /* Info.plist */,
@@ -691,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A3F3C9D24907B8F0058C5D4 /* LoginItemManager.swift in Sources */,
+				4A10B5272492ACB200F977CC /* LoginController.swift in Sources */,
 				4AA1888D2486FA90009CFACE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
