@@ -11,6 +11,7 @@ end
 target 'SpartaConnect' do
   pod 'Sparkle'             # auto-update the app
   pod 'LetsMove'            # move app to Applications folder
+  pod 'CCNNavigationController' # transition between view controllers
   pod 'NSBundle+LoginItem', # launch at login option
     # fix memory issues, expose setter in header
     # https://github.com/nklizhe/NSBundle-LoginItem/pull/7
