@@ -8,8 +8,9 @@ public protocol AlertProtocol {
     func show(alert: NSAlert)
 }
 
-class NetworkService: NetworkServiceProtocol {
-    func login(username: String) -> String {
+public class NetworkService: NetworkServiceProtocol {
+    public init() {}
+    public func login(username: String) -> String {
         "success"
     }
 }
