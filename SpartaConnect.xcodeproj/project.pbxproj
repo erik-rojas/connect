@@ -23,6 +23,7 @@
 		4A3F3CA32490CD740058C5D4 /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F3CA22490CD730058C5D4 /* BundleHelper.swift */; };
 		4A9F06D72492207500714B04 /* ToggleMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F06D62492207500714B04 /* ToggleMenuItem.swift */; };
 		4A9F06D92492252100714B04 /* ToggleMenuItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F06D82492252100714B04 /* ToggleMenuItemSpec.swift */; };
+		4A9F06DE2492CE4C00714B04 /* LoginControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F06DD2492CE4C00714B04 /* LoginControllerSpec.swift */; };
 		4AA1888D2486FA90009CFACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1888C2486FA90009CFACE /* AppDelegate.swift */; };
 		4AA188912486FA90009CFACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA188902486FA90009CFACE /* Assets.xcassets */; };
 		4AA188942486FA90009CFACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA188922486FA90009CFACE /* Main.storyboard */; };
@@ -101,6 +102,7 @@
 		4A9F06D52491DFFD00714B04 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4A9F06D62492207500714B04 /* ToggleMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleMenuItem.swift; sourceTree = "<group>"; };
 		4A9F06D82492252100714B04 /* ToggleMenuItemSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleMenuItemSpec.swift; sourceTree = "<group>"; };
+		4A9F06DD2492CE4C00714B04 /* LoginControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerSpec.swift; sourceTree = "<group>"; };
 		4AA188892486FA90009CFACE /* SpartaConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartaConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA1888C2486FA90009CFACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AA188902486FA90009CFACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				4A3F3C85248C92AE0058C5D4 /* SparkleUpdaterSpec.swift */,
+				4A9F06DD2492CE4C00714B04 /* LoginControllerSpec.swift */,
 				4A3F3C9E249090B50058C5D4 /* LoginItemManagerSpec.swift */,
 				4A3F3C87248C92AE0058C5D4 /* Info.plist */,
 			);
@@ -687,6 +690,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9F06DE2492CE4C00714B04 /* LoginControllerSpec.swift in Sources */,
 				4A3F3C86248C92AE0058C5D4 /* SparkleUpdaterSpec.swift in Sources */,
 				4A3F3C9F249090B50058C5D4 /* LoginItemManagerSpec.swift in Sources */,
 			);
