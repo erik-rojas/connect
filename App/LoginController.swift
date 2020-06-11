@@ -5,11 +5,6 @@ class LoginController: NSViewController {
     @IBOutlet weak var usernameField: NSTextField!
     @IBOutlet weak var passwordField: NSSecureTextField!
     @IBAction func connectAction(_ sender: NSButton) {
+        sender.window?.close()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do view setup here.
-    }
-    
 }
