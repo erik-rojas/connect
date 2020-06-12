@@ -30,3 +30,20 @@ public class LoginController: NSViewController {
     }
     
 }
+
+class Connected: NSViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        performSegue(withIdentifier: "to login", sender: self)
+    }
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        performSegue(withIdentifier: "to login", sender: self)
+    }
+}
+
+class Downloading: NSViewController {
+    @IBAction override func cancelOperation(_ sender: Any?) {
+        (sender as? NSView)?.window?.close()
+    }
+}

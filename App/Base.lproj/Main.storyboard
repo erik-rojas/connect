@@ -708,18 +708,21 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="480" height="270"/>
+                        <value key="maxSize" type="size" width="480" height="270"/>
+                        <contentBorderThickness minY="22"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="iIc-2Q-RVl" kind="relationship" relationship="window.shadowedContentViewController" id="bUl-mZ-EZr"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -729,7 +732,7 @@
         <!--Login Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="LoginController" customModule="SpartaConnect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController showSeguePresentationStyle="single" id="XfG-lQ-9wD" customClass="LoginController" customModule="SpartaConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -831,6 +834,17 @@
                                     </gridCell>
                                 </gridCells>
                             </gridView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PNj-b8-kqY">
+                                <rect key="frame" x="309" y="177" width="81" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JOg-jT-pAV">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="xdS-Yj-rPz" kind="sheet" id="6W2-Oj-pWG"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -841,9 +855,109 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="594" y="993"/>
+        </scene>
+        <!--Downloading-->
+        <scene sceneID="Mh5-AS-ZO0">
+            <objects>
+                <viewController showSeguePresentationStyle="single" id="xdS-Yj-rPz" customClass="Downloading" customModule="SpartaConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="cbT-Wa-lB5">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <progressIndicator wantsLayer="YES" fixedFrame="YES" maxValue="100" doubleValue="65" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="rJH-vq-NJg">
+                                <rect key="frame" x="200" y="170" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </progressIndicator>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qrr-41-Jx5">
+                                <rect key="frame" x="194" y="87" width="81" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZhF-ds-5la">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="cancelOperation:" target="xdS-Yj-rPz" id="fKG-vs-UJY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="Lt2-4u-bsS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="993"/>
+        </scene>
+        <!--Connected-->
+        <scene sceneID="Qzq-pV-Bsp">
+            <objects>
+                <viewController showSeguePresentationStyle="single" id="iIc-2Q-RVl" customClass="Connected" customModule="SpartaConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="7Yf-59-0eL">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j2G-v5-Yhm" userLabel="connected to:">
+                                <rect key="frame" x="97" y="225" width="73" height="21"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="connected:" id="2ln-Zw-ZNF">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="YOP-oG-DQ3">
+                                <rect key="frame" x="228" y="225" width="92" height="21"/>
+                                <textFieldCell key="cell" selectable="YES" title="Authorized To:" id="mI4-F5-8zv">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dgu-kB-ald">
+                                <rect key="frame" x="107" y="130" width="83" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="UHS-Wq-vrt"/>
+                                </constraints>
+                                <buttonCell key="cell" type="roundTextured" title="Disconnect" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cUP-gJ-OOQ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mpG-03-145">
+                                <rect key="frame" x="108" y="42" width="81" height="32"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EWV-Jd-H8Q">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="XfG-lQ-9wD" kind="sheet" id="QfY-yA-jv2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dgu-kB-ald" firstAttribute="leading" secondItem="7Yf-59-0eL" secondAttribute="leading" constant="107" id="3AP-kj-enh"/>
+                            <constraint firstItem="mpG-03-145" firstAttribute="top" secondItem="dgu-kB-ald" secondAttribute="bottom" constant="61" id="3Mn-bw-1mC"/>
+                            <constraint firstItem="dgu-kB-ald" firstAttribute="top" secondItem="j2G-v5-Yhm" secondAttribute="bottom" constant="73" id="72c-c0-85m"/>
+                            <constraint firstItem="j2G-v5-Yhm" firstAttribute="baseline" secondItem="YOP-oG-DQ3" secondAttribute="baseline" id="BBi-V7-MYe"/>
+                            <constraint firstItem="dgu-kB-ald" firstAttribute="centerX" secondItem="mpG-03-145" secondAttribute="centerX" id="Ein-VL-uHQ"/>
+                            <constraint firstItem="j2G-v5-Yhm" firstAttribute="leading" secondItem="7Yf-59-0eL" secondAttribute="leading" constant="99" id="Nrg-B4-Nkg"/>
+                            <constraint firstItem="YOP-oG-DQ3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="j2G-v5-Yhm" secondAttribute="trailing" symbolic="YES" id="Oje-ar-XPK"/>
+                            <constraint firstItem="j2G-v5-Yhm" firstAttribute="firstBaseline" secondItem="YOP-oG-DQ3" secondAttribute="firstBaseline" id="SWE-6t-8eH"/>
+                            <constraint firstItem="j2G-v5-Yhm" firstAttribute="top" secondItem="7Yf-59-0eL" secondAttribute="top" constant="54" id="c08-LH-fgN"/>
+                            <constraint firstAttribute="trailing" secondItem="YOP-oG-DQ3" secondAttribute="trailing" constant="132" id="cT3-k4-Xs3"/>
+                            <constraint firstItem="dgu-kB-ald" firstAttribute="top" secondItem="7Yf-59-0eL" secondAttribute="top" constant="148" id="pP0-5D-JQt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="sheet" identifier="to login" id="hVq-QU-mzU"/>
+                    </connections>
+                </viewController>
+                <customObject id="cht-0L-CV1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="521"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hVq-QU-mzU"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="circle" width="13" height="15"/>
         <image name="largecircle.fill.circle" width="13" height="15"/>
