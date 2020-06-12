@@ -24,6 +24,8 @@
 		4A9F06D72492207500714B04 /* ToggleMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F06D62492207500714B04 /* ToggleMenuItem.swift */; };
 		4A9F06D92492252100714B04 /* ToggleMenuItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F06D82492252100714B04 /* ToggleMenuItemSpec.swift */; };
 		4A9F06DE2492CE4C00714B04 /* LoginControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F06DD2492CE4C00714B04 /* LoginControllerSpec.swift */; };
+		4A9F06E1249322A500714B04 /* DownloadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9F06DF249322A500714B04 /* DownloadController.swift */; };
+		4A9F06E2249322A500714B04 /* DownloadController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A9F06E0249322A500714B04 /* DownloadController.xib */; };
 		4AA1888D2486FA90009CFACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1888C2486FA90009CFACE /* AppDelegate.swift */; };
 		4AA188912486FA90009CFACE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AA188902486FA90009CFACE /* Assets.xcassets */; };
 		4AA188942486FA90009CFACE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AA188922486FA90009CFACE /* Main.storyboard */; };
@@ -104,6 +106,8 @@
 		4A9F06D62492207500714B04 /* ToggleMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleMenuItem.swift; sourceTree = "<group>"; };
 		4A9F06D82492252100714B04 /* ToggleMenuItemSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleMenuItemSpec.swift; sourceTree = "<group>"; };
 		4A9F06DD2492CE4C00714B04 /* LoginControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerSpec.swift; sourceTree = "<group>"; };
+		4A9F06DF249322A500714B04 /* DownloadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadController.swift; sourceTree = "<group>"; };
+		4A9F06E0249322A500714B04 /* DownloadController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadController.xib; sourceTree = "<group>"; };
 		4AA188892486FA90009CFACE /* SpartaConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpartaConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA1888C2486FA90009CFACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AA188902486FA90009CFACE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -273,6 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				4AA1888C2486FA90009CFACE /* AppDelegate.swift */,
+				4A9F06DF249322A500714B04 /* DownloadController.swift */,
+				4A9F06E0249322A500714B04 /* DownloadController.xib */,
 				4A3F3C9C24907B8F0058C5D4 /* LoginItemManager.swift */,
 				4A10B5262492ACB200F977CC /* LoginController.swift */,
 				4AA188902486FA90009CFACE /* Assets.xcassets */,
@@ -502,6 +508,7 @@
 			files = (
 				4AA188912486FA90009CFACE /* Assets.xcassets in Resources */,
 				4AA188942486FA90009CFACE /* Main.storyboard in Resources */,
+				4A9F06E2249322A500714B04 /* DownloadController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +714,7 @@
 				4A3F3C9D24907B8F0058C5D4 /* LoginItemManager.swift in Sources */,
 				4A10B5272492ACB200F977CC /* LoginController.swift in Sources */,
 				4AA1888D2486FA90009CFACE /* AppDelegate.swift in Sources */,
+				4A9F06E1249322A500714B04 /* DownloadController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

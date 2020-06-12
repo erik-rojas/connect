@@ -708,7 +708,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -719,7 +719,7 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                        <segue destination="Z5i-au-xaI" kind="relationship" relationship="window.shadowedContentViewController" id="cZj-65-DIY"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -837,11 +837,119 @@
                         <outlet property="environmentButton" destination="7AK-70-8Qi" id="u4J-Qs-Eil"/>
                         <outlet property="passwordField" destination="eRC-fO-MXh" id="yhA-69-3PX"/>
                         <outlet property="usernameField" destination="Afd-gf-I4N" id="aNQ-RZ-NXG"/>
+                        <segue destination="IVI-Np-rKO" kind="custom" identifier="to download" customClass="PushSegue" customModule="SpartaConnect" customModuleProvider="target" id="WEw-Wk-lto"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Nav Container-->
+        <scene sceneID="kqO-br-8vk">
+            <objects>
+                <viewController id="Z5i-au-xaI" customClass="NavContainer" customModule="SpartaConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="zb0-vQ-csk">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thU-fn-Qo0">
+                                <rect key="frame" x="15" y="56" width="415" height="224"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <connections>
+                                    <segue destination="m6S-wh-qv2" kind="embed" id="LfZ-mD-TpZ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="custom" identifier="root" customClass="RootSegue" customModule="SpartaConnect" customModuleProvider="target" id="U39-HW-4lz"/>
+                    </connections>
+                </viewController>
+                <customObject id="nz4-KU-TVc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="87"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xdT-vY-Rhh">
+            <objects>
+                <viewController showSeguePresentationStyle="single" id="m6S-wh-qv2" customClass="CCNNavigationController" sceneMemberID="viewController">
+                    <view key="view" id="0Ku-WL-Qlt">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="N9q-YX-9hq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1201" y="285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Sw8-v1-KEa">
+            <objects>
+                <viewController id="IPE-YM-MDQ" sceneMemberID="viewController">
+                    <view key="view" id="R70-1E-gbR">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-2M-JhN">
+                                <rect key="frame" x="111" y="161" width="82" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hz8-2G-R0O">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="popWithSender:" target="W6D-SW-o2P" id="5Lq-oU-uvs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="W6D-SW-o2P" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1178" y="687"/>
+        </scene>
+        <!--Download Controller-->
+        <scene sceneID="MPG-df-a89">
+            <objects>
+                <viewController storyboardIdentifier="loading" id="IVI-Np-rKO" customClass="DownloadController" customModule="SpartaConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="QJQ-8Z-f9g">
+                        <rect key="frame" x="0.0" y="0.0" width="454" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hi8-rI-WFU">
+                                <rect key="frame" x="158" y="194" width="82" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ieC-5V-Bhf">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="popWithSender:" target="fWV-GP-AmC" id="dVq-Z4-onm"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyH-6G-aNK">
+                                <rect key="frame" x="171" y="106" width="69" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y3c-O9-ZsJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="IPE-YM-MDQ" kind="custom" customClass="PushSegue" customModule="SpartaConnect" customModuleProvider="target" id="ufX-Rf-UeF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="fWV-GP-AmC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="647" y="662"/>
         </scene>
     </scenes>
     <resources>
