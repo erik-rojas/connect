@@ -769,6 +769,11 @@
                                     <action selector="selectNextTabViewItem:" target="Nhb-9u-t1X" id="5D9-Wm-T7Y"/>
                                 </connections>
                             </button>
+                            <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N4b-VL-AQ4">
+                                <rect key="frame" x="144" y="114" width="185" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" image="NSComputer" id="j9f-xA-Hnw"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Bgq-XU-cem" secondAttribute="bottom" constant="20" symbolic="YES" id="Qvc-Nw-1jp"/>
@@ -808,6 +813,11 @@
                                     <action selector="selectNextTabViewItem:" target="O6h-8d-Q0F" id="948-du-dHq"/>
                                 </connections>
                             </button>
+                            <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K2v-Pz-AtB">
+                                <rect key="frame" x="86" y="134" width="185" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" image="NSNetwork" id="XWp-Km-mZk"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ks0-c5-IkH" secondAttribute="bottom" constant="20" symbolic="YES" id="Kp8-gk-Pzd"/>
@@ -830,17 +840,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" id="YmJ-lp-DU9">
-                                <rect key="frame" x="171" y="13" width="109" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Disconnect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8wT-ea-uL3">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="selectPreviousTabViewItem:" target="Av8-CC-Vcx" id="uAx-xu-dcm"/>
-                                </connections>
-                            </button>
+                            <stackView distribution="fillProportionally" orientation="vertical" alignment="centerX" spacing="88" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UpB-qV-9H3">
+                                <rect key="frame" x="125" y="0.0" width="213" height="269"/>
+                                <subviews>
+                                    <imageView translatesAutoresizingMaskIntoConstraints="NO" id="V7t-M3-Z8G">
+                                        <rect key="frame" x="91" y="109" width="32" height="160"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" image="NSColorPanel" id="ziv-ww-7BC"/>
+                                    </imageView>
+                                    <button verticalHuggingPriority="750" id="YmJ-lp-DU9">
+                                        <rect key="frame" x="52" y="-7" width="109" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="push" title="Disconnect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8wT-ea-uL3">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="selectPreviousTabViewItem:" target="Av8-CC-Vcx" id="uAx-xu-dcm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                     </view>
                 </viewController>
@@ -850,6 +877,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NSColorPanel" width="32" height="32"/>
+        <image name="NSComputer" width="32" height="32"/>
+        <image name="NSNetwork" width="32" height="32"/>
         <image name="menu-bar-icon" width="19" height="19"/>
     </resources>
 </document>
